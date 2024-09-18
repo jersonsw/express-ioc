@@ -1,0 +1,26 @@
+http:
+  host: 'localhost'
+  port: 8080
+typeorm:
+  type: postgres
+  username: cbt_api
+  password: '/^jnppem$/cbt_api'
+  port: 5433
+  host: 127.0.0.1
+  database: cbt_db
+  entities:
+    - dist/app/data/entities/**/*.entity.js
+    - src/app/data/entities/**/*.entity.ts
+  migrations:
+    - dist/app/data/migrations/**/*.js
+  uuidExtension: uuid-ossp
+  migrationsTransactionMode: each
+  synchronize: false
+  logging: false
+  migrationsRun: false
+  useUTC: true
+  seeds:
+    - dist/app/data/seeders/**/*.seeder.{ts,js}
+  factories:
+    - dist/app/data/factories/**/*.factory.{ts,js}
+
